@@ -8,6 +8,7 @@
 
 #import "FirstLevelViewController.h"
 #import "SecondLevelViewController.h"
+#import "DisclosureButtonViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -16,7 +17,8 @@
 static NSString *CellIdetifier = @"Cell";
 
 @implementation FirstLevelViewController
-
+@synthesize controllers;
+/*
 //метод initWithStyle: — специальный инициализатор для класса UITableViewController.
 - (id)initWithStyle:(UITableViewStyle)style {
     
@@ -24,15 +26,28 @@ static NSString *CellIdetifier = @"Cell";
     if (self) {
         // Настройка инициализации
         self.title = @"First level";
-        self.controllers = @[];
+        self.controllers = @[
+                             [[DisclosureButtonViewController alloc] init] ];
+
     }
     return self;
 }
-
+*/
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+    //[super viewDidLoad];
+    self.title = @"First Level";
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdetifier];
+    
+    // open button
+    DisclosureButtonViewController *disclosureButtonController = [[DisclosureButtonViewController alloc] initWithStyle:UITableViewStylePlain];
+    disclosureButtonController.title = @"Disclosure Buttons";
+    disclosureButtonController.rowImage = [UIImage imageNamed:@"disclosureButtonControllerIcon.png"];
+    [array addObject:disclosureButtonController];
+    
+    self.controllers = array;
+    [super viewDidLoad];
+
 }
 
 /*
@@ -44,39 +59,39 @@ static NSString *CellIdetifier = @"Cell";
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    // Возвращаем количество разделов.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    // Возвращаем количество строк в разделе.
     return [self.controllers count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdetifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    SecondLevelViewController *controller = self.controllers[indexPath.row];
+    static NSString *FirstLevelCell = @"FirstLevelCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FirstLevelCell];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FirstLevelCell];
+    }
+    // Cell configuration
+    NSUInteger row = [indexPath row];
+    SecondLevelViewController *controller = [controllers objectAtIndex:row];
     cell.textLabel.text = controller.title;
     cell.imageView.image = controller.rowImage;
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 #pragma mark UITableViewDelegate
-
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //извлекаем контроллер из нашего массива, который соответствует этой строке.
     SecondLevelViewController *controller = self.controllers[indexPath.row];
     //потом используем наше свойство navigationController, которое указывает на контроллер навигации нашего приложения, чтобы поместить следующий контроллер — тот, который мы извлекли из нашего массива, — в стек контроллера навигации:
     [self.navigationController pushViewController:controller animated:YES];
 }
-
+*/
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    SecondLevelViewController *nextController = [self.controllers objectAtIndex:row];
+    [self.navigationController pushViewController:nextController animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

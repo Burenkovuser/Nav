@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2707831EE4F5C3003C342E /* DisclosureButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2707821EE4F5C3003C342E /* DisclosureButtonViewController.m */; };
+		FB2707861EE4F656003C342E /* DisclosureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2707851EE4F656003C342E /* DisclosureDetailViewController.m */; };
 		FB5BA1831EE2A690004A7422 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5BA1821EE2A690004A7422 /* main.m */; };
 		FB5BA1861EE2A690004A7422 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5BA1851EE2A690004A7422 /* AppDelegate.m */; };
 		FB5BA18C1EE2A690004A7422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5BA18A1EE2A690004A7422 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB2707811EE4F5C3003C342E /* DisclosureButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclosureButtonViewController.h; sourceTree = "<group>"; };
+		FB2707821EE4F5C3003C342E /* DisclosureButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclosureButtonViewController.m; sourceTree = "<group>"; };
+		FB2707841EE4F656003C342E /* DisclosureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclosureDetailViewController.h; sourceTree = "<group>"; };
+		FB2707851EE4F656003C342E /* DisclosureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclosureDetailViewController.m; sourceTree = "<group>"; };
 		FB5BA17E1EE2A690004A7422 /* Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5BA1821EE2A690004A7422 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB5BA1841EE2A690004A7422 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +78,10 @@
 				FB5BA1991EE2A7E8004A7422 /* FirstLevelViewController.m */,
 				FB5BA19B1EE2AB0D004A7422 /* SecondLevelViewController.h */,
 				FB5BA19C1EE2AB0D004A7422 /* SecondLevelViewController.m */,
+				FB2707811EE4F5C3003C342E /* DisclosureButtonViewController.h */,
+				FB2707821EE4F5C3003C342E /* DisclosureButtonViewController.m */,
+				FB2707841EE4F656003C342E /* DisclosureDetailViewController.h */,
+				FB2707851EE4F656003C342E /* DisclosureDetailViewController.m */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -155,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2707861EE4F656003C342E /* DisclosureDetailViewController.m in Sources */,
 				FB5BA19A1EE2A7E8004A7422 /* FirstLevelViewController.m in Sources */,
+				FB2707831EE4F5C3003C342E /* DisclosureButtonViewController.m in Sources */,
 				FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */,
 				FB5BA1861EE2A690004A7422 /* AppDelegate.m in Sources */,
 				FB5BA1831EE2A690004A7422 /* main.m in Sources */,
@@ -315,6 +327,7 @@
 				FB5BA1971EE2A690004A7422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
