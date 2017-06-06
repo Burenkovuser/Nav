@@ -14,5 +14,7 @@
 
 @implementation SecondLevelViewController
 
+@synthesize rowImage;
+
 
 @end

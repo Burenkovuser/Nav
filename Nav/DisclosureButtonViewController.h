@@ -11,9 +11,12 @@
 @class DisclosureDetailViewController;
 
 
-@interface DisclosureButtonViewController : SecondLevelViewController
+@interface DisclosureButtonViewController : SecondLevelViewController {
+    NSArray *list;
+    DisclosureDetailViewController *childController;
+}
 
-@property(copy, nonatomic) NSArray *movies;
-@property(strong, nonatomic) DisclosureDetailViewController *detailController;
+
+@property (nonatomic, retain) NSArray *list;
 
 @end

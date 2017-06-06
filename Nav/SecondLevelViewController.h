@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondLevelViewController : UITableViewController
+@interface SecondLevelViewController : UITableViewController {
+    UIImage *rowImage;
+}
 
 @property(nonatomic, strong) UIImage *rowImage;
 

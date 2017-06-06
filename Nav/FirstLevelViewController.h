@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstLevelViewController : UITableViewController
-
+@interface FirstLevelViewController : UITableViewController {
+    NSArray *controllers;
+}
 
 @property(strong, nonatomic) NSArray *controllers;
 

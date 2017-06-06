@@ -16,59 +16,56 @@
 static NSString *CellIdentifier = @"Cell";
 
 @implementation DisclosureButtonViewController
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Настройка инициализации
-        self.title = @"Disclosure Buttons";
-        self.rowImage = [UIImage imageNamed:@"disclosureButtonControllerIcon.png"];
-        self.movies = @[@"Toy Story", @"A Bug's Life", @"Toy Story 2",
-                        @"Monsters, Inc.", @"Finding Nemo", @"The Incredibles", @"Cars", @"Ratatouille", @"WALL-E", @"Up", @"Toy Story 3", @"Cars 2", @"Brave"];
-        self.detailController = [[DisclosureDetailViewController alloc] init];
-    }
-    return self;
-}
-
+@synthesize list;
 
 
 - (void)viewDidLoad {
+    
+    NSArray *array = [[NSArray alloc] initWithObjects:@"Toy Story", @"A Bug`s Life", @"Toy Story 2", @"Monsters, inc.", @"Finding Nemo", @"The Incredibles" @"Cars", @"Ratatouille", @"WALL-E", @"Up", @"Toy Story 3", @"Cars 2", @"Brave", nil];
+    self.list = array;
     [super viewDidLoad];
-    // Дополнительная настройка после загрузки представления.
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+
 }
-/*
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void) viewDidUnload {
+    self.list = nil;
+    [super viewDidUnload];
 }
-*/
+
 
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.movies count];
+    return [list count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    static NSString *DisclosureButtonCellIdentifier = @"DisclosureButtonCellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DisclosureButtonCellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DisclosureButtonCellIdentifier];
+    }
+    NSUInteger row = [indexPath row];
+    NSString *rowString = [list objectAtIndex:row];
+    cell.textLabel.text = rowString;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    cell.textLabel.text = self.movies[indexPath.row];
-    
     return cell;
+    
 }
 
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //старый метод сейчас не используется
+    /*
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Hey, do you see the disclosure button?" message:@"Touch that to drill down instead." delegate:nil
                           cancelButtonTitle:@"Won't happen again" otherButtonTitles:nil];
     [alert show];
-    /*
+    */
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Hey, do you see the disclosure button?"
                                                                    message:@"Touch that to drill down instead." preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"Won't happen again" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -76,20 +73,22 @@ static NSString *CellIdentifier = @"Cell";
     }];
     [alert addAction:actionCancel];
     [self presentViewController:alert animated:YES completion: nil];
-    */
+    
 }
 
+//метод вызывает сообщение при нажатии на кнопку
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     
-    self.detailController.title = @"Disclosure Button Pressed";
-    NSString *selectedMovie = self.movies[indexPath.row];
-    NSString *detailMessage = [NSString stringWithFormat:@"This is details for %@", selectedMovie];
-    
-    self.detailController.message = detailMessage;
-    self.detailController.title = selectedMovie;
-    
-    [self.navigationController pushViewController:self.detailController animated:YES];
-    
+    if (childController == nil) {
+        childController = [[DisclosureDetailViewController alloc] initWithNibName:@"DisclosureDetail" bundle:nil];
+    }
+    childController.title = @"Disclosure Button Pressed";
+    NSUInteger row = [indexPath row];
+    NSString *selectedMovie = [list objectAtIndex:row];
+    NSString *detailMessage = [[NSString alloc] initWithFormat:@"You pressed the disclosure button for %@.", selectedMovie];
+    childController.message = detailMessage;
+    childController.title = selectedMovie;
+    [self.navigationController pushViewController:childController animated:YES];
     
 }
 
