@@ -20,7 +20,6 @@
         [self.navigationItem.rightBarButtonItem setTitle:@"Move"];
 }
 
-
 - (void)viewDidLoad {
     if (list == nil) {
         NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"знать", @"сидит", @"Каждый", @"фазан", @"где", @"охотник", @"желает", nil];

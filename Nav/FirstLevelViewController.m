@@ -12,6 +12,7 @@
 #import "CheckListViewController.h"
 #import "RowControlsViewController.h"
 #import "MoveMeViewController.h"
+#import "DeleteMeViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -51,6 +52,12 @@ static NSString *CellIdetifier = @"Cell";
     moveMeController.title = @"Move Me";
     moveMeController.rowImage = [UIImage imageNamed:@"moveMeIcon.png"];
     [array addObject:moveMeController];
+    
+    // Delete me
+    DeleteMeViewController *deleteMeController = [[DeleteMeViewController alloc] initWithStyle:UITableViewStylePlain];
+    deleteMeController.title = @"Delete Me";
+    deleteMeController.rowImage = [UIImage imageNamed:@"deleteMeIcon.png"];
+    [array addObject:deleteMeController];
     
     self.controllers = array;
     [super viewDidLoad];
