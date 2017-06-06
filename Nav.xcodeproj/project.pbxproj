@@ -16,6 +16,7 @@
 		FB5BA1911EE2A690004A7422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5BA18F1EE2A690004A7422 /* LaunchScreen.storyboard */; };
 		FB5BA19A1EE2A7E8004A7422 /* FirstLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5BA1991EE2A7E8004A7422 /* FirstLevelViewController.m */; };
 		FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5BA19C1EE2AB0D004A7422 /* SecondLevelViewController.m */; };
+		FB9C3A3B1EE69F45007DE904 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		FB5BA1991EE2A7E8004A7422 /* FirstLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevelViewController.m; sourceTree = "<group>"; };
 		FB5BA19B1EE2AB0D004A7422 /* SecondLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondLevelViewController.h; sourceTree = "<group>"; };
 		FB5BA19C1EE2AB0D004A7422 /* SecondLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondLevelViewController.m; sourceTree = "<group>"; };
+		FB9C3A391EE69F45007DE904 /* CheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListViewController.h; sourceTree = "<group>"; };
+		FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				FB2707821EE4F5C3003C342E /* DisclosureButtonViewController.m */,
 				FB2707841EE4F656003C342E /* DisclosureDetailViewController.h */,
 				FB2707851EE4F656003C342E /* DisclosureDetailViewController.m */,
+				FB9C3A391EE69F45007DE904 /* CheckListViewController.h */,
+				FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2707861EE4F656003C342E /* DisclosureDetailViewController.m in Sources */,
+				FB9C3A3B1EE69F45007DE904 /* CheckListViewController.m in Sources */,
 				FB5BA19A1EE2A7E8004A7422 /* FirstLevelViewController.m in Sources */,
 				FB2707831EE4F5C3003C342E /* DisclosureButtonViewController.m in Sources */,
 				FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */,

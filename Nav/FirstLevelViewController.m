@@ -9,6 +9,7 @@
 #import "FirstLevelViewController.h"
 #import "SecondLevelViewController.h"
 #import "DisclosureButtonViewController.h"
+#import "CheckListViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -18,23 +19,9 @@ static NSString *CellIdetifier = @"Cell";
 
 @implementation FirstLevelViewController
 @synthesize controllers;
-/*
-//метод initWithStyle: — специальный инициализатор для класса UITableViewController.
-- (id)initWithStyle:(UITableViewStyle)style {
-    
-    self = [super initWithStyle:style];
-    if (self) {
-        // Настройка инициализации
-        self.title = @"First level";
-        self.controllers = @[
-                             [[DisclosureButtonViewController alloc] init] ];
 
-    }
-    return self;
-}
-*/
 - (void)viewDidLoad {
-    //[super viewDidLoad];
+    
     self.title = @"First Level";
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdetifier];
@@ -44,6 +31,12 @@ static NSString *CellIdetifier = @"Cell";
     disclosureButtonController.title = @"Disclosure Buttons";
     disclosureButtonController.rowImage = [UIImage imageNamed:@"disclosureButtonControllerIcon.png"];
     [array addObject:disclosureButtonController];
+    
+    // Control list
+    CheckListViewController *checkListController = [[CheckListViewController alloc] initWithStyle:UITableViewStylePlain];
+    checkListController.title = @"Check One";
+    checkListController.rowImage = [UIImage imageNamed:@"checkmarkControllerIcon"];
+    [array addObject:checkListController];
     
     self.controllers = array;
     [super viewDidLoad];
