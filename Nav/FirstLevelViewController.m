@@ -10,6 +10,7 @@
 #import "SecondLevelViewController.h"
 #import "DisclosureButtonViewController.h"
 #import "CheckListViewController.h"
+#import "RowControlsViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -37,6 +38,12 @@ static NSString *CellIdetifier = @"Cell";
     checkListController.title = @"Check One";
     checkListController.rowImage = [UIImage imageNamed:@"checkmarkControllerIcon"];
     [array addObject:checkListController];
+    
+    // Элементы управления в строках таблицы
+    RowControlsViewController *rowControlsController = [[RowControlsViewController alloc] initWithStyle:UITableViewStylePlain];
+    rowControlsController.title = @"Row Controls";
+    rowControlsController.rowImage = [UIImage imageNamed:@"rowControlsIcon.png"];
+    [array addObject:rowControlsController];
     
     self.controllers = array;
     [super viewDidLoad];
