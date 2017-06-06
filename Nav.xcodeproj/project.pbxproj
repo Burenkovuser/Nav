@@ -18,6 +18,7 @@
 		FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5BA19C1EE2AB0D004A7422 /* SecondLevelViewController.m */; };
 		FB9C3A3B1EE69F45007DE904 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */; };
 		FB9C3A3E1EE6B531007DE904 /* RowControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A3D1EE6B531007DE904 /* RowControlsViewController.m */; };
+		FB9C3A411EE6D480007DE904 /* MoveMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A401EE6D480007DE904 /* MoveMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
 		FB9C3A3C1EE6B531007DE904 /* RowControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowControlsViewController.h; sourceTree = "<group>"; };
 		FB9C3A3D1EE6B531007DE904 /* RowControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowControlsViewController.m; sourceTree = "<group>"; };
+		FB9C3A3F1EE6D480007DE904 /* MoveMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveMeViewController.h; sourceTree = "<group>"; };
+		FB9C3A401EE6D480007DE904 /* MoveMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				FB9C3A3A1EE69F45007DE904 /* CheckListViewController.m */,
 				FB9C3A3C1EE6B531007DE904 /* RowControlsViewController.h */,
 				FB9C3A3D1EE6B531007DE904 /* RowControlsViewController.m */,
+				FB9C3A3F1EE6D480007DE904 /* MoveMeViewController.h */,
+				FB9C3A401EE6D480007DE904 /* MoveMeViewController.m */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */,
 				FB5BA1861EE2A690004A7422 /* AppDelegate.m in Sources */,
 				FB5BA1831EE2A690004A7422 /* main.m in Sources */,
+				FB9C3A411EE6D480007DE904 /* MoveMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

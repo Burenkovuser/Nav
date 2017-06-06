@@ -70,7 +70,7 @@ static NSString *CellIdentifier = @"Cell";
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Hey, do you see the disclosure button?"
                                                                    message:@"Touch that to drill down instead." preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"Won't happen again" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"Cancel action selected");
+        //NSLog(@"Cancel action selected");
     }];
     [alert addAction:actionCancel];
     [self presentViewController:alert animated:YES completion: nil];

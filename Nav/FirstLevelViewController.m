@@ -11,6 +11,7 @@
 #import "DisclosureButtonViewController.h"
 #import "CheckListViewController.h"
 #import "RowControlsViewController.h"
+#import "MoveMeViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -45,6 +46,12 @@ static NSString *CellIdetifier = @"Cell";
     rowControlsController.rowImage = [UIImage imageNamed:@"rowControlsIcon.png"];
     [array addObject:rowControlsController];
     
+    // Move me
+    MoveMeViewController *moveMeController = [[MoveMeViewController alloc] initWithStyle:UITableViewStylePlain];
+    moveMeController.title = @"Move Me";
+    moveMeController.rowImage = [UIImage imageNamed:@"moveMeIcon.png"];
+    [array addObject:moveMeController];
+    
     self.controllers = array;
     [super viewDidLoad];
 
@@ -63,7 +70,7 @@ static NSString *CellIdetifier = @"Cell";
 }
  */
 
-#pragma mark - Table view data source
+#pragma mark UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.controllers count];
