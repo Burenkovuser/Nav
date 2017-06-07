@@ -21,6 +21,10 @@
 		FB9C3A411EE6D480007DE904 /* MoveMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A401EE6D480007DE904 /* MoveMeViewController.m */; };
 		FB9C3A441EE6E412007DE904 /* DeleteMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A431EE6E412007DE904 /* DeleteMeViewController.m */; };
 		FB9C3A461EE6E575007DE904 /* computers.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB9C3A451EE6E575007DE904 /* computers.plist */; };
+		FB9C3A491EE6F02F007DE904 /* President.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A481EE6F02F007DE904 /* President.m */; };
+		FB9C3A4C1EE6F1F9007DE904 /* PresidentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A4B1EE6F1F9007DE904 /* PresidentsViewController.m */; };
+		FB9C3A4F1EE6F234007DE904 /* PresidentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C3A4E1EE6F234007DE904 /* PresidentDetailViewController.m */; };
+		FB9C3A511EE6F93D007DE904 /* Presidents.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB9C3A501EE6F93D007DE904 /* Presidents.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,13 @@
 		FB9C3A421EE6E412007DE904 /* DeleteMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteMeViewController.h; sourceTree = "<group>"; };
 		FB9C3A431EE6E412007DE904 /* DeleteMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteMeViewController.m; sourceTree = "<group>"; };
 		FB9C3A451EE6E575007DE904 /* computers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = computers.plist; sourceTree = SOURCE_ROOT; };
+		FB9C3A471EE6F02F007DE904 /* President.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = President.h; sourceTree = "<group>"; };
+		FB9C3A481EE6F02F007DE904 /* President.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = President.m; sourceTree = "<group>"; };
+		FB9C3A4A1EE6F1F9007DE904 /* PresidentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresidentsViewController.h; sourceTree = "<group>"; };
+		FB9C3A4B1EE6F1F9007DE904 /* PresidentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresidentsViewController.m; sourceTree = "<group>"; };
+		FB9C3A4D1EE6F234007DE904 /* PresidentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresidentDetailViewController.h; sourceTree = "<group>"; };
+		FB9C3A4E1EE6F234007DE904 /* PresidentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresidentDetailViewController.m; sourceTree = "<group>"; };
+		FB9C3A501EE6F93D007DE904 /* Presidents.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Presidents.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +116,13 @@
 				FB9C3A421EE6E412007DE904 /* DeleteMeViewController.h */,
 				FB9C3A431EE6E412007DE904 /* DeleteMeViewController.m */,
 				FB9C3A451EE6E575007DE904 /* computers.plist */,
+				FB9C3A471EE6F02F007DE904 /* President.h */,
+				FB9C3A481EE6F02F007DE904 /* President.m */,
+				FB9C3A4A1EE6F1F9007DE904 /* PresidentsViewController.h */,
+				FB9C3A4B1EE6F1F9007DE904 /* PresidentsViewController.m */,
+				FB9C3A4D1EE6F234007DE904 /* PresidentDetailViewController.h */,
+				FB9C3A4E1EE6F234007DE904 /* PresidentDetailViewController.m */,
+				FB9C3A501EE6F93D007DE904 /* Presidents.plist */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -175,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9C3A511EE6F93D007DE904 /* Presidents.plist in Resources */,
 				FB5BA1911EE2A690004A7422 /* LaunchScreen.storyboard in Resources */,
 				FB5BA18E1EE2A690004A7422 /* Assets.xcassets in Resources */,
 				FB5BA18C1EE2A690004A7422 /* Main.storyboard in Resources */,
@@ -190,15 +209,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2707861EE4F656003C342E /* DisclosureDetailViewController.m in Sources */,
+				FB9C3A4C1EE6F1F9007DE904 /* PresidentsViewController.m in Sources */,
 				FB9C3A3E1EE6B531007DE904 /* RowControlsViewController.m in Sources */,
 				FB9C3A3B1EE69F45007DE904 /* CheckListViewController.m in Sources */,
 				FB5BA19A1EE2A7E8004A7422 /* FirstLevelViewController.m in Sources */,
+				FB9C3A4F1EE6F234007DE904 /* PresidentDetailViewController.m in Sources */,
 				FB2707831EE4F5C3003C342E /* DisclosureButtonViewController.m in Sources */,
 				FB9C3A441EE6E412007DE904 /* DeleteMeViewController.m in Sources */,
 				FB5BA19D1EE2AB0D004A7422 /* SecondLevelViewController.m in Sources */,
 				FB5BA1861EE2A690004A7422 /* AppDelegate.m in Sources */,
 				FB5BA1831EE2A690004A7422 /* main.m in Sources */,
 				FB9C3A411EE6D480007DE904 /* MoveMeViewController.m in Sources */,
+				FB9C3A491EE6F02F007DE904 /* President.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

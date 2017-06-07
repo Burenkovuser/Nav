@@ -13,6 +13,7 @@
 #import "RowControlsViewController.h"
 #import "MoveMeViewController.h"
 #import "DeleteMeViewController.h"
+#import "PresidentsViewController.h"
 
 //@interface FirstLevelViewController ()
 
@@ -58,6 +59,12 @@ static NSString *CellIdetifier = @"Cell";
     deleteMeController.title = @"Delete Me";
     deleteMeController.rowImage = [UIImage imageNamed:@"deleteMeIcon.png"];
     [array addObject:deleteMeController];
+    
+    // Presidents of USA
+    PresidentsViewController *presidentViewController = [[PresidentsViewController alloc] initWithStyle:UITableViewStylePlain];
+    presidentViewController.title = @"Detail Edit";
+    presidentViewController.rowImage = [UIImage imageNamed:@"detailEditIcon.png"];
+    [array addObject:presidentViewController];
     
     self.controllers = array;
     [super viewDidLoad];
